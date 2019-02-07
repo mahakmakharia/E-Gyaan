@@ -82,7 +82,7 @@ h2:after
     margin-top: 20px;
 }
 header{
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/hero.jpeg);
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(hero.jpeg);
     background-size: cover;
     background-position:center;
     height: 100vh;
@@ -310,7 +310,7 @@ steps-box:first-child {
 
 .section-testimonials
 {
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(img/bg.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(bg.jpg);
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
