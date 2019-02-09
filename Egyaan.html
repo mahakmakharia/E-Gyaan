@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="grid.css">
         <link rel="stylesheet" type="text/css" href="ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="style.css"> 
-      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type='txt/css'>
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300 italic" rel="stylesheet" type='txt/css'>
       <title>E-Gyaan</title>
     </head>
     <body>
@@ -14,18 +15,19 @@
             <nav class="sticky">
                 <div class="row">
                     <img src="Egyan%20logo.png" alt="E-Gyaan logo" class="logo">
-                    <img src="Egyan%20logo.png" alt="E-Gyaan logo" class="logocpy">
+                    <a href="#start"><img src="Egyan%20logo.png" alt="E-Gyaan logo" class="logocpy"></a>
                     <ul class="main-nav">
                         <LI><a href="#features">features</a></LI>
                          <LI><a href="#works">How it Works</a></LI>
                          <LI><a href="#teachers">Our Teachers</a></LI>
-                        <LI><a href="#plans">Sign up</a></LI>
+                        <LI><a href="#login">Log In</a></LI>
+                        <LI><a href="#plans">Sign Up</a></LI>
                    </ul>
                 </div>
             </nav>
-            <div class="hero-text-box">
+            <div class="hero-text-box" id="start">
                 <h1>Goodbye boring classes.<br> Hello engaging real time videos.</h1>
-                <a class="btn btn-full  " href="#plans">Let's learn</a>
+                <a class="btn btn-full  " href="#login">Let's Go</a>
                 <a class="btn btn-ghost" href="#features">Show me more</a>
              </div>
         
@@ -216,8 +218,46 @@
                     <cite><img src="c3.jpg">Jenny Watson</cite>
                 </blockquote>
                 </div>
+        
                 
             </div>
+        </section>
+        <section class="section-login" id="login">
+            <div class="row">
+                <h2>You've already joined us? Please Log In.</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="details">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="password" id="password" placeholder="Your password" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Log In!">
+                        </div>
+                    </div>
+                    
+                </form>
+                
+            </div>
+        
         </section>
         <section class="section-plans" id="plans" >
            <div class="row">
@@ -277,20 +317,14 @@
                         <li>Any number of courses every day</li> 
                         <li>24*7 access</li>
                         <li>Certification on completion</li>
-                        
-                        </ul>
+                    </ul>
                     </div>
                     <div>
                         <a href="#" class="btn btn-ghost">Sign up now</a>
                     </div>
                   </div>
                 </div>
-            </div>
-            
-                    
-                        
-                
-                    
+            </div>                            
         </section>
         <section class="section-form">
             <div class="row">
@@ -357,11 +391,12 @@
             </div>
         </section>
         
+        
         <footer>
             <div class="row">
                 <div class="col span-1-of-2">
                     <ul class="footer-nav">
-                        <li><a href="#">About us</a></li>
+                        <li><a href="#features">About us</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Press</a></li>
                         
@@ -383,6 +418,5 @@
             </div>
         </footer>
         
-  
     </body>
 </html>
