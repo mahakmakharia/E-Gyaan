@@ -5,24 +5,22 @@
 /*--------------------------------------------*/
 
 
-
 /*--------------------------------------------*/
 /*BASIC SETUP*/
 /*--------------------------------------------*/
 *{
     margin: 0;
     padding:0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
-html,
-body{
+html {
     background-color: #fff;
     color: #555;
-    font-family: 'Lato', 'Arial,' sans-serif;
+    font-family: 'Lato', 'Arial' ,'sans-serif';
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
 }
 .clearfix { zoom: 1}
 .clearfix:after{
@@ -76,14 +74,16 @@ h3{
 h2:after
 {
     display: block;
+   
     height: 2px;
     background-color: #e67e22; 
     content: " ";
     width: 155px;
-    margin: 0 475px;
+    margin: 0 auto;
     margin-top: 20px;
 }
 header{
+    background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.7)),to(rgba(0,0,0,0.7))), url(hero.jpeg);
     background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(hero.jpeg);
     background-size: cover;
     background-position:center;
@@ -94,6 +94,7 @@ header{
     width:1140px;
     top: 50%;
     left:50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
 /*---------PARAGRAPHS---------------*/
@@ -123,6 +124,7 @@ input[type=submit]
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
+    -webkit-transition : background-color 0.2s, border 0.2s, color 0.2s;
     transition : background-color 0.2s, border 0.2s, color 0.2s;
     
 }
@@ -167,12 +169,13 @@ btn-full:hover,
     margin-top: 20px;
 }
 
-.logocpy { 
+.logo-black { 
     display: none;
     height: 50px;
     width: auto;
     float: left;
     margin: 5px 0;
+}
 }
 /*--------------------------------------------*/
 /*NAVIGATION*/
@@ -196,12 +199,16 @@ btn-full:hover,
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+
+/* Sticky navi */
 .sticky {
     position: fixed;
     top: 0;
@@ -221,7 +228,33 @@ btn-full:hover,
 }
 
 .sticky .logo { display: none; }
-.sticky .logocpy { display: block; }
+.sticky .logo-black { display: block; }
+
+/* ----- LINKS ----- */
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ----------------------------------------------- */
+/* FEATURES */
+/* ----------------------------------------------- */
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
 /*--------------------------------------------*/
 /*COURSE SECTION*/
 /*--------------------------------------------*/
@@ -249,11 +282,16 @@ btn-full:hover,
     opacity: 0.7;
     width: 100%;
     height:auto;
+    -webkit-transform: scale(1.15);
     transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s opacity 0.5;
+    transition: -webkit-transform 0.5s opacity 0.5;
     transition: transform 0.5s opacity 0.5;
+    transition: transform 0.5s opacity 0.5, -webkit-transform 0.5s opacity 0.5;
 }
 .courseph img:hover{
     opacity: 1;
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
 }
 /*--------------------------------------------*/
@@ -278,7 +316,7 @@ steps-box:first-child {
 }
 .picture
 {
-    width:80%;
+    width:100%;
 }
 .worksteps{
     margin-bottom: 25px;
@@ -312,6 +350,7 @@ steps-box:first-child {
 
 .section-testimonials
 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.8)),to(rgba(0,0,0,0.8))),url(bg.jpg);
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(bg.jpg);
     background-size: cover;
     color: #fff;
@@ -339,8 +378,7 @@ cite{
     display: block;
 }
 cite img{
-    width: 50px;
-    height: 50px;
+
     border-radius:50%;
     vertical-align: middle;
 }
@@ -357,6 +395,7 @@ cite img{
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
+    -webkit-box-shadow: 0 2px 2px #fff;
     box-shadow: 0 2px 2px #fff;
 }
 .plan-box div{
@@ -420,6 +459,7 @@ input[type=checkbox] {
 }
 
 *:focus {outline: none;}
+
 /*--------------------------------------------*/
 /*SECTION: LOG IN*/
 /*--------------------------------------------*/
@@ -448,6 +488,8 @@ textarea {
 /*--------------------------------------------*/
 /*SECTION: FOOTER*/
 /*--------------------------------------------*/
+
+
 
 footer {
     background-color: #333;
